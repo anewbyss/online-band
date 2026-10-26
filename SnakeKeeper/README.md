@@ -68,6 +68,20 @@ delete the template's Swift files, drag in the `App/` folder, then use *File →
 Dependencies… → Add Local…* to add the `SnakeGenetics` folder. Add `NSCameraUsageDescription` to
 the Info tab if you want the camera button.
 
+**On iPad with Swift Playgrounds (no Mac needed)**
+
+`SnakeKeeper.swiftpm` is the same app packaged for Swift Playgrounds (4.4 or later, iPadOS 17+).
+
+1. Install **Swift Playgrounds** from the App Store.
+2. In Safari on the iPad, open the repo on GitHub, pick this branch, then *Code → Download ZIP*.
+3. In the Files app, tap the ZIP to unzip it, then open `SnakeKeeper/SnakeKeeper.swiftpm`.
+   It opens in Playgrounds.
+4. Tap ▶ to run it. To install it as a normal app on the home screen, use
+   *App Settings → Install on This iPad* (or the ⋯ menu, depending on the version).
+
+`SnakeKeeper.swiftpm` is generated. After changing `App/` or `SnakeGenetics/`, run
+`scripts/make-playground.sh` to rebuild it.
+
 **Run the genetics tests**
 
 ```sh
