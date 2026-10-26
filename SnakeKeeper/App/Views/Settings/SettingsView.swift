@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 import SnakeGenetics
 
-/// Browse the built-in gene library and manage custom genes.
+/// Export data, browse the built-in gene library and manage custom genes.
 struct SettingsView: View {
     @Environment(\.modelContext) private var context
     @Query(sort: \CustomGene.name) private var customGenes: [CustomGene]
@@ -12,6 +12,8 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
+                ExportSection()
+
                 Section {
                     ForEach(customGenes) { gene in
                         Button { editing = gene } label: {
@@ -45,7 +47,7 @@ struct SettingsView: View {
                     }
                 }
             }
-            .navigationTitle("Genes")
+            .navigationTitle("Settings")
             .sheet(isPresented: $showingNew) {
                 NavigationStack { CustomGeneEditView(gene: nil) }
             }

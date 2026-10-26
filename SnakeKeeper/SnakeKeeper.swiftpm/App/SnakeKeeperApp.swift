@@ -30,7 +30,7 @@ struct ContentView: View {
             GeneticsCalculatorView()
                 .tabItem { Label("Genetics", systemImage: "square.grid.3x3") }
             SettingsView()
-                .tabItem { Label("Genes", systemImage: "slider.horizontal.3") }
+                .tabItem { Label("Settings", systemImage: "gearshape") }
         }
     }
 }

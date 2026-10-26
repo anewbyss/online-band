@@ -24,6 +24,9 @@ photos and pairings, and predict clutches with a built-in genetics calculator.
 - **Genetics calculator**: pick species, load parents from your collection or enter genes by hand,
   and see every outcome with its percentage, expected count per clutch, het / possible-het odds and
   health notes (e.g. Spider wobble).
+- **Export to Excel / Google Sheets**: Settings → Export creates an `.xlsx` workbook with Snakes,
+  Feedings, Concerns and Pairings tabs, or one CSV per tab. Share it to Excel, Numbers, the Google
+  Sheets app, Google Drive, Files, AirDrop or Mail.
 
 ## Genetics engine
 
@@ -35,7 +38,7 @@ photos and pairings, and predict clutches with a built-in genetics calculator.
   Yellow Belly × Gravel → Highway, Amel × Ultra → Ultramel, and so on
 - Any number of genes at once (e.g. a triple-het × triple-het cross gives all 8 groups)
 - Built-in libraries for Ball Python (40+ genes), Corn Snake, Western Hognose and Boa
-- Custom genes for any species (Genes tab), including allelic links and health notes
+- Custom genes for any species (Settings tab), including allelic links and health notes
 
 ```swift
 import SnakeGenetics
@@ -97,8 +100,8 @@ SnakeKeeper/
 ├── App/
 │   ├── SnakeKeeperApp.swift    entry point + tabs
 │   ├── Models/                 SwiftData models (Snake, FeedingRecord, SnakePhoto, Concern, Pairing, CustomGene)
-│   ├── Support/                gene catalog, formatting, image downscaling
-│   └── Views/                  Collection, Feeding, Pairings, Genetics, Settings (Genes)
+│   ├── Support/                gene catalog, formatting, images, spreadsheet export
+│   └── Views/                  Collection, Feeding, Pairings, Genetics, Settings
 └── SnakeGenetics/              Swift package: genes, library, calculator, tests
 ```
 
