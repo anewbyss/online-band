@@ -116,7 +116,7 @@ struct GenePickerView: View {
                     ContentUnavailableView(
                         "No genes for this species",
                         systemImage: "square.grid.3x3",
-                        description: Text("Add custom genes in the Genes tab.")
+                        description: Text("Add custom genes in the Settings tab.")
                     )
                 }
             }
